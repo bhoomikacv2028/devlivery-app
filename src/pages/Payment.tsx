@@ -32,11 +32,16 @@ const { items } = useCart();
 
     const data = await response.json();
     console.log(data);
-
     alert("Order saved in MongoDB ✅");
 
-    navigate("/success");
-  } catch (error) {
+if (method === "cod") {
+  navigate("/success");
+} else {
+  navigate("/razorpay", {
+  state: { amount: totalAmount }
+});
+}
+ } catch (error) {
     console.log(error);
     alert("Error saving order ❌");
   }

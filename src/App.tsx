@@ -9,6 +9,7 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import Address from "./pages/Address";
 import Payment from "./pages/Payment";
+import Razorpay from "./pages/Razorpay";
 import Success from "./pages/Success";
 import Orders from "./pages/Orders";
 
@@ -27,6 +28,7 @@ const App = () => (
   <Route path="/" element={<Index />} />
   <Route path="/address" element={<Address />} />
   <Route path="/payment" element={<Payment />} />
+  <Route path="/razorpay" element={<Razorpay />} />
   <Route path="/success" element={<Success />} />
   <Route path="/orders" element={<Orders />} />
    <Route path="*" element={<NotFound />} />
